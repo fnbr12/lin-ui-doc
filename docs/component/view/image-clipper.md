@@ -12,7 +12,7 @@ title: 图片裁剪 ImageClipper(研发中)
 
 该组件默认撑满整个屏幕，您可以通过 `l-class` 外部样式类进行定制。
 
-- `ImageContent`—— 图片内容区域：被裁剪的图片可以在此区域任意移动、放大、缩小和旋转等操作
+- `ImageContent`—— 图片内容区域：被裁剪的图片可以在此区域任意移动、缩放和旋转等操作
 - `ClipperContent`—— 裁剪内容区域：此区域可以放大缩小，裁剪只会保留该区域的内容
 - `ToolsContent`—— Tools区域：在此区域，**您可以任意定制您想要的功能**，如图所示，可以放一些功能性的按钮，**当然，您也可以随意放其他内容，随心所欲**，我们会默认内置一些功能，此区域默认功能需引用子组件 `ImageClipperTools` 
 
@@ -28,10 +28,7 @@ title: 图片裁剪 ImageClipper(研发中)
 ### 代码演示
 
 ```wxml
-<l-image-clipper 
-  show="{{true}}" 
-  image-url="{{图片路径}}" 
->
+<l-image-clipper show="{{true}}" image-url="{{图片路径}}">
   <l-image-clipper-tools />
 </l-image-clipper>
 ```
@@ -48,11 +45,7 @@ title: 图片裁剪 ImageClipper(研发中)
 
 ```wxml
 <l-button bind:lintap="upload" size="large">选择图片</l-button>
-<l-image-clipper 
-  show="{{true}}" 
-  image-url="{{imageUrl}}"
-  bindlinclip="linclip"
->
+<l-image-clipper show="{{true}}" image-url="{{imageUrl}}"bindlinclip="linclip">
   <l-image-clipper-tools />
 </l-image-clipper>
 ```
@@ -97,10 +90,7 @@ Page({
 ### 代码演示
 
 ```wxml
-<l-image-clipper 
-  show="{{true}}" 
-  image-url="{{imageUrl}}"
->
+<l-image-clipper show="{{true}}" image-url="{{imageUrl}}">
   <l-image-clipper-tools 
     lock-width="{{true}}" 
     lock-height="{{true}}" 
@@ -174,10 +164,10 @@ Page({
 
 | 事件名称 | 说明 | 返回值	 | 备注 |
 |:----|:----|:----|:----|
-| bind:linimageready	| 图片加载完成式触发	| `width`：图片宽度、`height`：图片高度、`path`：图片本地路径、`orientation`：拍照时设备方向、`type`：图片格式 | - |
+| bind:linimageready	| 图片加载完成式触发	| `width`：图片宽度 <br /> `height`：图片高度<br />`path`：图片本地路径<br />`orientation`：拍照时设备方向<br />`type`：图片格式 | - |
 | bind:linrotate	| 图片旋转时触发	| `currentDeg`：当前旋转的角度 | - |
-| bind:linsizechange	| 图片大小改变时触发	| `imageWidth`：当前图片宽度、`imageHeight`：当前图片高度 | - |
-| bind:linclip	| 图片裁剪完成后触发	| `url`：生成的图片url、`base64`：生成的图片base64、`width`：生成的图片宽度、`height`：生成的图片高度 | - |
+| bind:linsizechange	| 图片大小改变时触发	| `imageWidth`：当前图片宽度<br />`imageHeight`：当前图片高度 | - |
+| bind:linclip	| 图片裁剪完成后触发	| `url`：生成的图片url<br />`base64`：生成的图片base64<br />`width`：生成的图片宽度<br />`height`：生成的图片高度 | - |
 
 <RightMenu />
 
