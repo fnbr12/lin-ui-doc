@@ -14,15 +14,12 @@ title: 图片裁剪 ImageClipper(研发中)
 
 - `ImageContent`—— 图片内容区域：被裁剪的图片可以在此区域任意移动、缩放和旋转等操作
 - `ClipperContent`—— 裁剪内容区域：此区域可以放大缩小，裁剪只会保留该区域的内容
-- `ToolsContent`—— Tools区域：在此区域，**您可以任意定制您想要的功能**，如图所示，可以放一些功能性的按钮，**当然，您也可以随意放其他内容，随心所欲**，我们会默认内置一些功能，此区域默认功能需引用子组件 `ImageClipperTools` 
+- `ToolsContent`—— Tools区域：在此区域，**您可以任意定制您想要的功能**，如图所示，可以放一些功能性的按钮，**当然，您也可以随意放其他内容，随心所欲**，我们会默认内置一些功能，此区域部分功能需引用子组件 `ImageClipperTools` 
 
 以上三个名词分别对应的部分如下图所示：
 <img-wrapper>
-<a data-fancybox href="/screenshots/image-clipper/image-clipper.png">
-<img  src="/screenshots/image-clipper/image-clipper.png"/>
-</a>
+<img src="/screenshots/image-clipper/image-clipper.png"/>
 </img-wrapper>
-
 ## 基础使用
 
 ### 代码演示
@@ -34,9 +31,7 @@ title: 图片裁剪 ImageClipper(研发中)
 ```
 
 <img-wrapper>
-<a data-fancybox href="/screenshots/image-clipper/demo1.png">
 <img  src="/screenshots/image-clipper/demo1.png"/>
-</a>
 </img-wrapper>
 
 ## 页面选择图片
@@ -80,9 +75,7 @@ Page({
 ```
 
 <img-wrapper>
-<a data-fancybox href="/screenshots/image-clipper/demo2.png">
 <img  src="/screenshots/image-clipper/demo2.png"/>
-</a>
 </img-wrapper>
 
 ## 自定义工具栏
@@ -103,9 +96,7 @@ Page({
 ```
 
 <img-wrapper>
-<a data-fancybox href="/screenshots/image-clipper/demo3.png">
 <img  src="/screenshots/image-clipper/demo3.png"/>
-</a>
 </img-wrapper>
 
 ## 组件属性（ImageClipper Attributes）
@@ -131,11 +122,6 @@ Page({
 | disable-scale	| 是否禁止缩放	| Boolean | - | false |
 | disable-rotate | 是否禁止旋转	| Boolean | - | false |
 | limit-move	| 是否限制移动范围	| Boolean | - | false |
-
-## 工具栏组件属性（ImageClipperTools Attributes）
-
-| 参数 | 说明 | 类型 | 可选值 | 默认值 |
-|:----|:----|:----|:----|:----|
 | check-image	| 是否显示选择图片按钮	| Boolean | - | true |
 | check-image-icon	| 选择图片按钮图标url地址	| String | - | - |
 | rotate-along	| 是否显示顺时针旋转按钮	| Boolean | - | true |
@@ -146,12 +132,17 @@ Page({
 | sure-icon	| 确定按钮图标url地址	| String | - | - |
 | close	| 是否显示关闭按钮	| Boolean | - | true |
 | close-icon	| 关闭按钮图标url地址	| String | - | - |
+| rotate-angle	| 旋转按钮每次旋转的角度	| Number | - | 90 |
+
+## 工具栏组件属性（ImageClipperTools Attributes）
+
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+|:----|:----|:----|:----|:----|
 | lock-width	| 是否显示锁定裁剪框宽度按钮	| Boolean | - | false |
 | lock-height	| 是否显示锁定裁剪框高度按钮	| Boolean | - | false |
 | lock-ratio	| 是否显示锁定裁剪框比例按钮	| Boolean | - | false |
 | disable-scale	| 是否显示禁止缩放按钮	| Boolean | - | false |
 | limit-move	| 是否显示限制移动范围按钮	| Boolean | - | false |
-| rotate-angle	| 旋转按钮每次旋转的角度	| Number | - | 90 |
 
 
 ## 组件外部样式类（ImageClipper ExternalClasses）
