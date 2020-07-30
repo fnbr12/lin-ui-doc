@@ -21,7 +21,7 @@ title: 标签页 Tabs
 
 ## 等宽标签
 
-默认为等宽标签，在 `tabs` 上设置 `equal-width="{{false}}"` 时，取消等宽标签，此时宽度为 `文本内容 + 左右各20rpx的padding`;
+默认为等宽标签，在 `tabs` 上设置 `equalWidth="{{false}}"` 时，取消等宽标签，此时宽度为 `文本内容 + 左右各20rpx的padding`;
 
 默认激活的是第一个标签页，通过`tabs`组件上设置`active-key="{\{key}}"`配置初始状态时激活的选项卡。
 
@@ -115,6 +115,7 @@ title: 标签页 Tabs
 | placement | 标签位置 | String | `top`/`left`/`right`/`bottom` | `top` |
 | animated  | 是否使用动画切换标签 | Boolean | `false` |
 | animated-for-line | 是否使用动画切换装饰线 | Boolean | `false` |
+| equalWidth | 是否为等宽标签 | Boolean | `true` |
 | swipeable | 是否支持滑动切换标签 | Boolean | `false` |
 | scrollable | 是否滚动标签栏 | Boolean | `false` | - |
 | active-color | 设置激活状态标签的文本和图标颜色 | String | 表示颜色的是16进制 | - |
